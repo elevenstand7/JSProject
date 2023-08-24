@@ -1,11 +1,8 @@
 
-// import Example from "./scripts/example";
+import View from "./scripts/game-view";
 
-// document.addEventListener("DOMContentLoaded",
-// function(){
-//     console.log("hello world!");
-
-//     const main = document.getElementById("main");
-//     new Example(main);
-// }
-// );
+// document.addEventListener("DOMContentLoaded", () => {
+//     const game = new Game();
+//     const rootEl = document.querySelector(".game-board");
+//     new View(game, rootEl);
+//   });

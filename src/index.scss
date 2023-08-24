@@ -1,0 +1,54 @@
+h1{
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 5rem;
+}
+
+li{
+    list-style: none;
+}
+
+.btn{
+    background-color: #E1ECC8;
+    border-radius: 12px;
+    border: 2px solid #A0C49D;
+    padding: 15px 32px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.controller-menu{
+    text-align: center;
+}
+
+.farm{
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    width: 920px;
+    height: 540px;
+    background-image: url("../images/grass3.png");
+    background-size: cover;
+}
+
+.hole{
+    float: left;
+    width: 235px;
+    height:100px;
+    margin-top: 120px;
+    margin-left: 30px;
+    // border: 2px solid;
+    background-size: contain;
+    background-image: url("../images/hole.png");
+}
+
+.loopy{
+    position: relative;
+    margin-top: -35px;
+    margin-left: 60px;
+    width: 100px;
+    height:100px;
+    background-size: contain;
+    background-image: url("../images/loopy-removebg-preview.png");
+}
