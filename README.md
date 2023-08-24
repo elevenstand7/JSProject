@@ -49,7 +49,7 @@ This project will be implemented with the following technologies:
 
 ## Implementation Timeline
 
-Thursday:Set up the project, including getting webpack up and running. Let the canvas display on the screen, and create the HTML structure for the game, including the game board and buttons. Begin styling with basic CSS to make the game visually presentable.
+*   **Thursday:** Set up the project, including getting webpack up and running. Let the canvas display on the screen, and create the HTML structure for the game, including the game board and buttons. Begin styling with basic CSS to make the game visually presentable.
 
 *   **Friday & Weekend:** Implement the game logic, ensure that I can create moles that pop up randomly, add event listeners for user interactions, create a simple scoring system and a countdown timer for the game.,
 
