@@ -54,10 +54,45 @@ li{
 
 .loopy{
     position: relative;
+    border: 2px solid;
     margin-top: -35px;
     margin-left: 60px;
     width: 100px;
     height:100px;
     background-size: contain;
     background-image: url("../images/loopy-removebg-preview.png");
+}
+
+
+.show{
+    animation-name: showUp;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes showUp {
+    from {
+        height: 0;
+      }
+
+      to {
+        height: 50px;
+      }
+}
+
+
+.hidden{
+    animation-name: hide;
+    animation-duration: 0.1s;
+    animation-fill-mode: both;
+}
+
+@keyframes hide {
+    from {
+        height: 50px;
+      }
+
+      to {
+        height: 0;
+      }
 }
