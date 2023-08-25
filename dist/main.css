@@ -7,12 +7,12 @@ h1 {
   font-size: 5rem;
 }
 
-body {
-  cursor: url("../images/mallet1-removebg-preview.png"), auto;
-}
-
 li {
   list-style: none;
+}
+
+.game-board {
+  cursor: url("../images/mallet1-removebg-preview.png"), auto;
 }
 
 .btn {

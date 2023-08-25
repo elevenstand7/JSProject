@@ -3,7 +3,7 @@ class View{
         this.game = game;
         this.el =el;
         this.clickHandler = this.clickHandler.bind(this);
-        this.setUpBoard();
+        // this.setUpBoard();
     }
 
 
@@ -12,8 +12,10 @@ class View{
 
         for(let i=0;i<6;i++){
             const li = document.createElement("li");
-            li.dataset.pos = JSON.stringify([i, j])
-            ul.append(div);
+            li.dataset.pos = JSON.stringify([i, j]);
+            const div = document.createElement("div")
+            li.append(div);
+            ul.append(li);
 
         }
 

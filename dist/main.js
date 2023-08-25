@@ -7,6 +7,7 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/index.js":
@@ -15,19 +16,7 @@
   \**********************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scripts_game_view__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/game-view */ \"./src/scripts/game-view.js\");\n/* harmony import */ var _scripts_game__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/game */ \"./src/scripts/game.js\");\n/* harmony import */ var _scripts_game__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scripts_game__WEBPACK_IMPORTED_MODULE_1__);\n\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  const game = new (_scripts_game__WEBPACK_IMPORTED_MODULE_1___default())();\n  const rootEl = document.querySelector(\".game-board\");\n  new _scripts_game_view__WEBPACK_IMPORTED_MODULE_0__[\"default\"](game, rootEl);\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMiLCJtYXBwaW5ncyI6Ijs7OztBQUN1QztBQUNMO0FBRWxDRSxRQUFRLENBQUNDLGdCQUFnQixDQUFDLGtCQUFrQixFQUFFLE1BQU07RUFDaEQsTUFBTUMsSUFBSSxHQUFHLElBQUlILHNEQUFJLENBQUMsQ0FBQztFQUN2QixNQUFNSSxNQUFNLEdBQUdILFFBQVEsQ0FBQ0ksYUFBYSxDQUFDLGFBQWEsQ0FBQztFQUNwRCxJQUFJTiwwREFBSSxDQUFDSSxJQUFJLEVBQUVDLE1BQU0sQ0FBQztBQUN4QixDQUFDLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9qc3Byb2plY3QvLi9zcmMvaW5kZXguanM/YjYzNSJdLCJzb3VyY2VzQ29udGVudCI6WyJcbmltcG9ydCBWaWV3IGZyb20gXCIuL3NjcmlwdHMvZ2FtZS12aWV3XCI7XG5pbXBvcnQgR2FtZSBmcm9tIFwiLi9zY3JpcHRzL2dhbWVcIjtcblxuZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcihcIkRPTUNvbnRlbnRMb2FkZWRcIiwgKCkgPT4ge1xuICAgIGNvbnN0IGdhbWUgPSBuZXcgR2FtZSgpO1xuICAgIGNvbnN0IHJvb3RFbCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuZ2FtZS1ib2FyZFwiKTtcbiAgICBuZXcgVmlldyhnYW1lLCByb290RWwpO1xuICB9KTtcblxuIl0sIm5hbWVzIjpbIlZpZXciLCJHYW1lIiwiZG9jdW1lbnQiLCJhZGRFdmVudExpc3RlbmVyIiwiZ2FtZSIsInJvb3RFbCIsInF1ZXJ5U2VsZWN0b3IiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/index.js\n");
-
-/***/ }),
-
-/***/ "./src/scripts/game-view.js":
-/*!**********************************!*\
-  !*** ./src/scripts/game-view.js ***!
-  \**********************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nclass View {\n  constructor(game, el) {\n    this.game = game;\n    this.el = el;\n    this.clickHandler = this.clickHandler.bind(this);\n    this.setUpBoard();\n  }\n  setUpBoard() {\n    const ul = document.createElement(\"ul\");\n    for (let i = 0; i < 6; i++) {\n      const li = document.createElement(\"li\");\n      li.dataset.pos = JSON.stringify([i, j]);\n      ul.append(div);\n    }\n    this.el.append(ul);\n    this.el.addEventListener(\"click\", this.handleClick);\n  }\n}\n/* harmony default export */ __webpack_exports__[\"default\"] = (View);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvc2NyaXB0cy9nYW1lLXZpZXcuanMiLCJtYXBwaW5ncyI6IjtBQUFBLE1BQU1BLElBQUk7RUFDTkMsV0FBV0EsQ0FBQ0MsSUFBSSxFQUFFQyxFQUFFLEVBQUM7SUFDakIsSUFBSSxDQUFDRCxJQUFJLEdBQUdBLElBQUk7SUFDaEIsSUFBSSxDQUFDQyxFQUFFLEdBQUVBLEVBQUU7SUFDWCxJQUFJLENBQUNDLFlBQVksR0FBRyxJQUFJLENBQUNBLFlBQVksQ0FBQ0MsSUFBSSxDQUFDLElBQUksQ0FBQztJQUNoRCxJQUFJLENBQUNDLFVBQVUsQ0FBQyxDQUFDO0VBQ3JCO0VBR0FBLFVBQVVBLENBQUEsRUFBRTtJQUNSLE1BQU1DLEVBQUUsR0FBR0MsUUFBUSxDQUFDQyxhQUFhLENBQUMsSUFBSSxDQUFDO0lBRXZDLEtBQUksSUFBSUMsQ0FBQyxHQUFDLENBQUMsRUFBQ0EsQ0FBQyxHQUFDLENBQUMsRUFBQ0EsQ0FBQyxFQUFFLEVBQUM7TUFDaEIsTUFBTUMsRUFBRSxHQUFHSCxRQUFRLENBQUNDLGFBQWEsQ0FBQyxJQUFJLENBQUM7TUFDdkNFLEVBQUUsQ0FBQ0MsT0FBTyxDQUFDQyxHQUFHLEdBQUdDLElBQUksQ0FBQ0MsU0FBUyxDQUFDLENBQUNMLENBQUMsRUFBRU0sQ0FBQyxDQUFDLENBQUM7TUFDdkNULEVBQUUsQ0FBQ1UsTUFBTSxDQUFDQyxHQUFHLENBQUM7SUFFbEI7SUFFQSxJQUFJLENBQUNmLEVBQUUsQ0FBQ2MsTUFBTSxDQUFDVixFQUFFLENBQUM7SUFDbEIsSUFBSSxDQUFDSixFQUFFLENBQUNnQixnQkFBZ0IsQ0FBQyxPQUFPLEVBQUUsSUFBSSxDQUFDQyxXQUFXLENBQUM7RUFDdkQ7QUFDSjtBQUdBLCtEQUFlcEIsSUFBSSIsInNvdXJjZXMiOlsid2VicGFjazovL2pzcHJvamVjdC8uL3NyYy9zY3JpcHRzL2dhbWUtdmlldy5qcz9jNmE2Il0sInNvdXJjZXNDb250ZW50IjpbImNsYXNzIFZpZXd7XG4gICAgY29uc3RydWN0b3IoZ2FtZSwgZWwpe1xuICAgICAgICB0aGlzLmdhbWUgPSBnYW1lO1xuICAgICAgICB0aGlzLmVsID1lbDtcbiAgICAgICAgdGhpcy5jbGlja0hhbmRsZXIgPSB0aGlzLmNsaWNrSGFuZGxlci5iaW5kKHRoaXMpO1xuICAgICAgICB0aGlzLnNldFVwQm9hcmQoKTtcbiAgICB9XG5cblxuICAgIHNldFVwQm9hcmQoKXtcbiAgICAgICAgY29uc3QgdWwgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwidWxcIik7XG5cbiAgICAgICAgZm9yKGxldCBpPTA7aTw2O2krKyl7XG4gICAgICAgICAgICBjb25zdCBsaSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJsaVwiKTtcbiAgICAgICAgICAgIGxpLmRhdGFzZXQucG9zID0gSlNPTi5zdHJpbmdpZnkoW2ksIGpdKVxuICAgICAgICAgICAgdWwuYXBwZW5kKGRpdik7XG5cbiAgICAgICAgfVxuXG4gICAgICAgIHRoaXMuZWwuYXBwZW5kKHVsKTtcbiAgICAgICAgdGhpcy5lbC5hZGRFdmVudExpc3RlbmVyKFwiY2xpY2tcIiwgdGhpcy5oYW5kbGVDbGljayk7XG4gICAgfVxufVxuXG5cbmV4cG9ydCBkZWZhdWx0IFZpZXc7XG4iXSwibmFtZXMiOlsiVmlldyIsImNvbnN0cnVjdG9yIiwiZ2FtZSIsImVsIiwiY2xpY2tIYW5kbGVyIiwiYmluZCIsInNldFVwQm9hcmQiLCJ1bCIsImRvY3VtZW50IiwiY3JlYXRlRWxlbWVudCIsImkiLCJsaSIsImRhdGFzZXQiLCJwb3MiLCJKU09OIiwic3RyaW5naWZ5IiwiaiIsImFwcGVuZCIsImRpdiIsImFkZEV2ZW50TGlzdGVuZXIiLCJoYW5kbGVDbGljayJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/scripts/game-view.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scripts_game__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/game */ \"./src/scripts/game.js\");\n// import View from \"./scripts/game-view\";\n\n\n// document.addEventListener(\"DOMContentLoaded\", () => {\n//     const game = new Game();\n//     const rootEl = document.querySelector(\".game-board\");\n//     new View(game, rootEl);\n//   });\n\ndocument.addEventListener(\"DOMContentLoaded\", function () {\n  console.log(\"hello world!\");\n  const game = new _scripts_game__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\n  // const gameStart = document.getElementById(\"start\");\n  // gameStart.addEventListener(\"click\", function(){alert(\"u click start!\")});\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguanMiLCJtYXBwaW5ncyI6Ijs7QUFDQTtBQUNrQzs7QUFFbEM7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQUMsUUFBUSxDQUFDQyxnQkFBZ0IsQ0FBQyxrQkFBa0IsRUFDNUMsWUFBVTtFQUNOQyxPQUFPLENBQUNDLEdBQUcsQ0FBQyxjQUFjLENBQUM7RUFDM0IsTUFBTUMsSUFBSSxHQUFHLElBQUlMLHFEQUFJLENBQUMsQ0FBQztFQUN2QjtFQUNBO0FBQ0osQ0FDQSxDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vanNwcm9qZWN0Ly4vc3JjL2luZGV4LmpzP2I2MzUiXSwic291cmNlc0NvbnRlbnQiOlsiXG4vLyBpbXBvcnQgVmlldyBmcm9tIFwiLi9zY3JpcHRzL2dhbWUtdmlld1wiO1xuaW1wb3J0IEdhbWUgZnJvbSBcIi4vc2NyaXB0cy9nYW1lXCI7XG5cbi8vIGRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoXCJET01Db250ZW50TG9hZGVkXCIsICgpID0+IHtcbi8vICAgICBjb25zdCBnYW1lID0gbmV3IEdhbWUoKTtcbi8vICAgICBjb25zdCByb290RWwgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmdhbWUtYm9hcmRcIik7XG4vLyAgICAgbmV3IFZpZXcoZ2FtZSwgcm9vdEVsKTtcbi8vICAgfSk7XG5cbmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoXCJET01Db250ZW50TG9hZGVkXCIsXG5mdW5jdGlvbigpe1xuICAgIGNvbnNvbGUubG9nKFwiaGVsbG8gd29ybGQhXCIpO1xuICAgIGNvbnN0IGdhbWUgPSBuZXcgR2FtZSgpO1xuICAgIC8vIGNvbnN0IGdhbWVTdGFydCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwic3RhcnRcIik7XG4gICAgLy8gZ2FtZVN0YXJ0LmFkZEV2ZW50TGlzdGVuZXIoXCJjbGlja1wiLCBmdW5jdGlvbigpe2FsZXJ0KFwidSBjbGljayBzdGFydCFcIil9KTtcbn1cbik7XG5cblxuXG4iXSwibmFtZXMiOlsiR2FtZSIsImRvY3VtZW50IiwiYWRkRXZlbnRMaXN0ZW5lciIsImNvbnNvbGUiLCJsb2ciLCJnYW1lIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/index.js\n");
 
 /***/ }),
 
@@ -35,9 +24,9 @@ eval("__webpack_require__.r(__webpack_exports__);\nclass View {\n  constructor(g
 /*!*****************************!*\
   !*** ./src/scripts/game.js ***!
   \*****************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("class Game {\n  constructor() {\n    this.gameStart = document.getElementById(\"start\");\n  }\n  getRandomHole() {\n    return Math.floor(Math.random() * 6);\n  }\n\n  //     setRandomLoopy(params) {\n  //         let loopy = document.\n  //     }\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvc2NyaXB0cy9nYW1lLmpzIiwibmFtZXMiOlsiR2FtZSIsImNvbnN0cnVjdG9yIiwiZ2FtZVN0YXJ0IiwiZG9jdW1lbnQiLCJnZXRFbGVtZW50QnlJZCIsImdldFJhbmRvbUhvbGUiLCJNYXRoIiwiZmxvb3IiLCJyYW5kb20iXSwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsid2VicGFjazovL2pzcHJvamVjdC8uL3NyYy9zY3JpcHRzL2dhbWUuanM/Y2RjMCJdLCJzb3VyY2VzQ29udGVudCI6WyJjbGFzcyBHYW1le1xuICAgIGNvbnN0cnVjdG9yKCl7XG4gICAgICAgIHRoaXMuZ2FtZVN0YXJ0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJzdGFydFwiKTtcblxuICAgIH1cblxuICAgIGdldFJhbmRvbUhvbGUoKXtcbiAgICAgICAgcmV0dXJuIE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSo2KVxuICAgIH1cblxuLy8gICAgIHNldFJhbmRvbUxvb3B5KHBhcmFtcykge1xuLy8gICAgICAgICBsZXQgbG9vcHkgPSBkb2N1bWVudC5cbi8vICAgICB9XG5cblxufVxuXG4iXSwibWFwcGluZ3MiOiJBQUFBLE1BQU1BLElBQUk7RUFDTkMsV0FBV0EsQ0FBQSxFQUFFO0lBQ1QsSUFBSSxDQUFDQyxTQUFTLEdBQUdDLFFBQVEsQ0FBQ0MsY0FBYyxDQUFDLE9BQU8sQ0FBQztFQUVyRDtFQUVBQyxhQUFhQSxDQUFBLEVBQUU7SUFDWCxPQUFPQyxJQUFJLENBQUNDLEtBQUssQ0FBQ0QsSUFBSSxDQUFDRSxNQUFNLENBQUMsQ0FBQyxHQUFDLENBQUMsQ0FBQztFQUN0Qzs7RUFFSjtFQUNBO0VBQ0E7QUFHQSJ9\n//# sourceURL=webpack-internal:///./src/scripts/game.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\nclass Game {\n  constructor() {\n    this.gameStart = document.getElementById(\"start\");\n    this.currentHole = []; //array to hold the holes current having loopy;\n    this.score = 0;\n    // this.addEventListener(\"click\", this.clickHole);\n    // this.clickHandler = this.clickHandler.bind(this);\n    this.startGame();\n  }\n  getRandomHole() {\n    return Math.floor(Math.random() * 6);\n  }\n  startGame() {\n    this.gameStart.addEventListener(\"click\", function () {\n      alert(\"u click start!\");\n    });\n    this.clickHole();\n  }\n  //     setRandomLoopy(params) {\n  //         let loopy = document.\n  //     }\n\n  clickHole() {\n    let holeList = document.querySelectorAll(\".hole\");\n    holeList.forEach(ele => {\n      ele.addEventListener(\"click\", function () {\n        alert(\"click hole!\");\n      });\n    });\n    // if (this.currentHole.includes(currentClick)){\n    //     score += 1;\n    //     document.getElementById(\"score\").innerText = score.toString();\n    // }\n  }\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Game);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvc2NyaXB0cy9nYW1lLmpzIiwibWFwcGluZ3MiOiI7QUFBQSxNQUFNQSxJQUFJO0VBQ05DLFdBQVdBLENBQUEsRUFBRTtJQUNULElBQUksQ0FBQ0MsU0FBUyxHQUFHQyxRQUFRLENBQUNDLGNBQWMsQ0FBQyxPQUFPLENBQUM7SUFDakQsSUFBSSxDQUFDQyxXQUFXLEdBQUcsRUFBRSxDQUFDO0lBQ3RCLElBQUksQ0FBQ0MsS0FBSyxHQUFHLENBQUM7SUFDZDtJQUNBO0lBQ0EsSUFBSSxDQUFDQyxTQUFTLENBQUMsQ0FBQztFQUNwQjtFQUdBQyxhQUFhQSxDQUFBLEVBQUU7SUFDWCxPQUFPQyxJQUFJLENBQUNDLEtBQUssQ0FBQ0QsSUFBSSxDQUFDRSxNQUFNLENBQUMsQ0FBQyxHQUFDLENBQUMsQ0FBQztFQUN0QztFQUVBSixTQUFTQSxDQUFBLEVBQUU7SUFDUCxJQUFJLENBQUNMLFNBQVMsQ0FBQ1UsZ0JBQWdCLENBQUMsT0FBTyxFQUFFLFlBQVU7TUFBQ0MsS0FBSyxDQUFDLGdCQUFnQixDQUFDO0lBQUEsQ0FBQyxDQUFDO0lBQzdFLElBQUksQ0FBQ0MsU0FBUyxDQUFDLENBQUM7RUFDcEI7RUFDSjtFQUNBO0VBQ0E7O0VBRUlBLFNBQVNBLENBQUEsRUFBRTtJQUNQLElBQUlDLFFBQVEsR0FBR1osUUFBUSxDQUFDYSxnQkFBZ0IsQ0FBQyxPQUFPLENBQUM7SUFDakRELFFBQVEsQ0FBQ0UsT0FBTyxDQUFDQyxHQUFHLElBQUU7TUFDbEJBLEdBQUcsQ0FBQ04sZ0JBQWdCLENBQUMsT0FBTyxFQUFFLFlBQVU7UUFBQ0MsS0FBSyxDQUFDLGFBQWEsQ0FBQztNQUFBLENBQ2pFLENBQUM7SUFBQSxDQUFDLENBQUM7SUFDSDtJQUNBO0lBQ0E7SUFDQTtFQUNKO0FBRUo7O0FBRUEsK0RBQWViLElBQUkiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9qc3Byb2plY3QvLi9zcmMvc2NyaXB0cy9nYW1lLmpzP2NkYzAiXSwic291cmNlc0NvbnRlbnQiOlsiY2xhc3MgR2FtZXtcbiAgICBjb25zdHJ1Y3Rvcigpe1xuICAgICAgICB0aGlzLmdhbWVTdGFydCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwic3RhcnRcIik7XG4gICAgICAgIHRoaXMuY3VycmVudEhvbGUgPSBbXTsvL2FycmF5IHRvIGhvbGQgdGhlIGhvbGVzIGN1cnJlbnQgaGF2aW5nIGxvb3B5O1xuICAgICAgICB0aGlzLnNjb3JlID0gMDtcbiAgICAgICAgLy8gdGhpcy5hZGRFdmVudExpc3RlbmVyKFwiY2xpY2tcIiwgdGhpcy5jbGlja0hvbGUpO1xuICAgICAgICAvLyB0aGlzLmNsaWNrSGFuZGxlciA9IHRoaXMuY2xpY2tIYW5kbGVyLmJpbmQodGhpcyk7XG4gICAgICAgIHRoaXMuc3RhcnRHYW1lKCk7XG4gICAgfVxuXG5cbiAgICBnZXRSYW5kb21Ib2xlKCl7XG4gICAgICAgIHJldHVybiBNYXRoLmZsb29yKE1hdGgucmFuZG9tKCkqNilcbiAgICB9XG5cbiAgICBzdGFydEdhbWUoKXtcbiAgICAgICAgdGhpcy5nYW1lU3RhcnQuYWRkRXZlbnRMaXN0ZW5lcihcImNsaWNrXCIsIGZ1bmN0aW9uKCl7YWxlcnQoXCJ1IGNsaWNrIHN0YXJ0IVwiKX0pO1xuICAgICAgICB0aGlzLmNsaWNrSG9sZSgpO1xuICAgIH1cbi8vICAgICBzZXRSYW5kb21Mb29weShwYXJhbXMpIHtcbi8vICAgICAgICAgbGV0IGxvb3B5ID0gZG9jdW1lbnQuXG4vLyAgICAgfVxuXG4gICAgY2xpY2tIb2xlKCl7XG4gICAgICAgIGxldCBob2xlTGlzdCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoXCIuaG9sZVwiKTtcbiAgICAgICAgaG9sZUxpc3QuZm9yRWFjaChlbGU9PntcbiAgICAgICAgICAgIGVsZS5hZGRFdmVudExpc3RlbmVyKFwiY2xpY2tcIiwgZnVuY3Rpb24oKXthbGVydChcImNsaWNrIGhvbGUhXCIpfVxuICAgICAgICApfSk7XG4gICAgICAgIC8vIGlmICh0aGlzLmN1cnJlbnRIb2xlLmluY2x1ZGVzKGN1cnJlbnRDbGljaykpe1xuICAgICAgICAvLyAgICAgc2NvcmUgKz0gMTtcbiAgICAgICAgLy8gICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwic2NvcmVcIikuaW5uZXJUZXh0ID0gc2NvcmUudG9TdHJpbmcoKTtcbiAgICAgICAgLy8gfVxuICAgIH1cblxufVxuXG5leHBvcnQgZGVmYXVsdCBHYW1lO1xuIl0sIm5hbWVzIjpbIkdhbWUiLCJjb25zdHJ1Y3RvciIsImdhbWVTdGFydCIsImRvY3VtZW50IiwiZ2V0RWxlbWVudEJ5SWQiLCJjdXJyZW50SG9sZSIsInNjb3JlIiwic3RhcnRHYW1lIiwiZ2V0UmFuZG9tSG9sZSIsIk1hdGgiLCJmbG9vciIsInJhbmRvbSIsImFkZEV2ZW50TGlzdGVuZXIiLCJhbGVydCIsImNsaWNrSG9sZSIsImhvbGVMaXN0IiwicXVlcnlTZWxlY3RvckFsbCIsImZvckVhY2giLCJlbGUiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/scripts/game.js\n");
 
 /***/ }),
 
@@ -47,7 +36,6 @@ eval("class Game {\n  constructor() {\n    this.gameStart = document.getElementB
   \************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguc2NzcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9qc3Byb2plY3QvLi9zcmMvaW5kZXguc2Nzcz85NzQ1Il0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/index.scss\n");
 
 /***/ })
@@ -79,35 +67,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	!function() {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = function(module) {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				function() { return module['default']; } :
-/******/ 				function() { return module; };
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
-/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	!function() {
 /******/ 		// define __esModule on exports

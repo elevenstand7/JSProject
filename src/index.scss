@@ -3,15 +3,19 @@ h1{
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 5rem;
 }
-body{
-    // margin: 0;
-    cursor: url('../images/mallet1-removebg-preview.png'), auto;
-    // cursor: cell;
-}
+// body{
+//     // margin: 0;
+//     cursor: url('../images/mallet1-removebg-preview.png'), auto;
+//     // cursor: cell;
+// }
 
 li{
     list-style: none;
 }
+.game-board{
+    cursor: url('../images/mallet1-removebg-preview.png'), auto;
+}
+
 
 .btn{
     background-color: #E1ECC8;
