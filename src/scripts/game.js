@@ -1,31 +1,31 @@
 class Game{
     constructor(){
         this.gameStart = document.getElementById("start");
-        this.currentHole = 0;//array to hold the holes current having loopy;
         this.restTime = document.getElementById("time");
-        // this.addEventListener("click", this.clickHole);
-        // this.clickHandler = this.clickHandler.bind(this);
+        this.score = document.getElementById("score");
         this.startGame();
     }
 
 
     startGame(){
         let currentScore = 0;
-        let currentTime = 60;
         this.gameStart.addEventListener("click", function(){alert("u click start!")});
         // this.showLoopy();
         this.timer();
         setInterval(this.showLoopy, 2000);
         this.clickLoopy(currentScore);
+        // alert("Game over!")
+
+
     }
 
     clickLoopy(currentScore){
         let loopyList = document.querySelectorAll(".loopy");
         loopyList.forEach(ele=>{
-            ele.addEventListener("click", function(){
+            ele.addEventListener("click", ()=>{
                 // alert("click loopy!");
                 currentScore += 1;
-                document.getElementById("score").innerText = currentScore.toString();
+                this.score.innerText = currentScore.toString();
 
             }
         )});
@@ -59,13 +59,20 @@ class Game{
     // }
 
     timer(){
-        let currentTime = Number(document.getElementById("time").innerHTML.slice(0,2));
-        setInterval(function(){
-            if(currentTime >0){
+        let currentTime = Number(this.restTime.innerHTML.slice(0,2));
+        let countDown = setInterval(()=>{
+            if(currentTime !== 0){
                 currentTime -= 1;
-                document.getElementById("time").innerText = currentTime.toString()+" s";
+                this.restTime.innerText = currentTime.toString() +"s";
+            }else{
+                // alert("Game over!");
+                // clearInterval(countDown);
             }
         }, 1000);
+    }
+
+    gameOver(){
+
     }
 
 }

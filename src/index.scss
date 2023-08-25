@@ -2,12 +2,13 @@ h1{
     text-align: center;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 5rem;
+    color: #7A9D54;
 }
-// body{
-//     // margin: 0;
-//     cursor: url('../images/mallet1-removebg-preview.png'), auto;
-//     // cursor: cell;
-// }
+
+body{
+    background-image: url("../images/background1.jpeg");
+    background-size:cover;
+}
 
 li{
     list-style: none;
@@ -26,8 +27,19 @@ li{
     margin: 10px;
 }
 
+// .container{
+//     display:inline-block;
+// }
 .controller-menu{
     text-align: center;
+
+}
+
+.display{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 1.5rem;
+    color: #FF6666;
+
 }
 
 .farm{
@@ -37,7 +49,8 @@ li{
     margin: 30px auto;
     width: 920px;
     height: 540px;
-    background-image: url("../images/grass3.png");
+
+    background-image: url("../images/grass.png");
     background-size: cover;
 }
 
@@ -45,8 +58,11 @@ li{
     float: left;
     width: 235px;
     height:100px;
+    // width: 20%;
+    // height: 20%;
     margin-top: 120px;
     margin-left: 30px;
+
     // border: 2px solid;
     background-size: contain;
     background-image: url("../images/hole.png");
@@ -55,8 +71,8 @@ li{
 .loopy{
     position: relative;
     border: 2px solid;
-    margin-top: -35px;
-    margin-left: 60px;
+    // margin-top: -35px;
+    // margin-left: 60px;
     width: 100px;
     height:100px;
     background-size: contain;

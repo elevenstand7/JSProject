@@ -5,6 +5,12 @@ h1 {
   text-align: center;
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 5rem;
+  color: #7A9D54;
+}
+
+body {
+  background-image: url("../images/background1.jpeg");
+  background-size: cover;
 }
 
 li {
@@ -28,13 +34,19 @@ li {
   text-align: center;
 }
 
+.display {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.5rem;
+  color: #FF6666;
+}
+
 .farm {
   display: flex;
   flex-wrap: wrap;
   margin: 30px auto;
   width: 920px;
   height: 540px;
-  background-image: url("../images/grass3.png");
+  background-image: url("../images/grass.png");
   background-size: cover;
 }
 
@@ -51,8 +63,6 @@ li {
 .loopy {
   position: relative;
   border: 2px solid;
-  margin-top: -35px;
-  margin-left: 60px;
   width: 100px;
   height: 100px;
   background-size: contain;
