@@ -2,7 +2,8 @@ class Game{
     constructor(){
         this.gameStart = document.getElementById("start");
         this.currentHole = 0;//array to hold the holes current having loopy;
-        this.score = 0;
+        this.score = document.getElementById("score");
+        this.restTime = document.getElementById("time");
         // this.addEventListener("click", this.clickHole);
         // this.clickHandler = this.clickHandler.bind(this);
         this.startGame();
@@ -10,47 +11,57 @@ class Game{
 
 
     startGame(){
+        let currentScore = 0;
         this.gameStart.addEventListener("click", function(){alert("u click start!")});
-        this.showLoopy();
-        this.clickHole();
+        // this.showLoopy();
+        setInterval(this.showLoopy, 2000);
+        this.clickHole(currentScore);
     }
 //     setRandomLoopy(params) {
 //         let loopy = document.
 //     }
 
-    clickHole(){
+    clickHole(currentScore){
         let loopyList = document.querySelectorAll(".loopy");
         loopyList.forEach(ele=>{
             ele.addEventListener("click", function(){
                 alert("click loopy!");
+                currentScore += 1;
+                this.score.innerText = currentScore.toString();
+
             }
         )});
-        // if (this.currentHole.includes(currentClick)){
-        //     score += 1;
-        //     document.getElementById("score").innerText = score.toString();
-        // }
+
+            // document.getElementById("score").innerText = score.toString();
+
     }
 
 //function to get random number between 0-5, for select random hole
-    getRandomHole(){
-        return Math.floor(Math.random()*6)
-    }
+    // getRandomHole(){
+    //     return Math.floor(Math.random()*6)
+    // };
 
     showLoopy(){
-        let randomNum =  this.getRandomHole();
+        let randomNum =  Math.floor(Math.random()*6);
         let loopyList = document.querySelectorAll(".loopy");
         let loopy = loopyList[randomNum];
         loopy.classList.add("showUp");
         loopy.classList.remove("hidden");
-        this.hideLoopy(loopy);
-    }
 
-    hideLoopy(ele){
+
+        // this.hideLoopy(loopy);
         setTimeout(function(){
-            ele.classList.add("hidden");
-            ele.classList.remove("showUp");
+            loopy.classList.add("hidden");
+            loopy.classList.remove("showUp");
         },3000);
     }
+
+    // hideLoopy(ele){
+    //     setTimeout(function(){
+    //         ele.classList.add("hidden");
+    //         ele.classList.remove("showUp");
+    //     },3000);
+    // }
 
 }
 

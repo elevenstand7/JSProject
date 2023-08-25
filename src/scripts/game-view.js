@@ -7,21 +7,21 @@ class View{
     }
 
 
-    setUpBoard(){
-        const ul = document.createElement("ul");
+    // setUpBoard(){
+    //     const ul = document.createElement("ul");
 
-        for(let i=0;i<6;i++){
-            const li = document.createElement("li");
-            li.dataset.pos = JSON.stringify([i, j]);
-            const div = document.createElement("div")
-            li.append(div);
-            ul.append(li);
+    //     for(let i=0;i<6;i++){
+    //         const li = document.createElement("li");
+    //         li.dataset.pos = JSON.stringify([i, j]);
+    //         const div = document.createElement("div")
+    //         li.append(div);
+    //         ul.append(li);
 
-        }
+    //     }
 
-        this.el.append(ul);
-        this.el.addEventListener("click", this.handleClick);
-    }
+    //     this.el.append(ul);
+    //     this.el.addEventListener("click", this.handleClick);
+    // }
 }
 
 
