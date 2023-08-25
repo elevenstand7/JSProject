@@ -10,12 +10,11 @@ class View{
     setUpBoard(){
         const ul = document.createElement("ul");
 
-        for(let i=0;i<3;i++){
-            for(let j=0;j<3;j++){
-                const li = document.createElement("li");
-                li.dataset.pos = JSON.stringify([i, j])
-                ul.append(li);
-            }
+        for(let i=0;i<6;i++){
+            const li = document.createElement("li");
+            li.dataset.pos = JSON.stringify([i, j])
+            ul.append(div);
+
         }
 
         this.el.append(ul);
