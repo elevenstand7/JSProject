@@ -2,7 +2,6 @@ class Game{
     constructor(){
         this.gameStart = document.getElementById("start");
         this.currentHole = 0;//array to hold the holes current having loopy;
-        this.score = document.getElementById("score");
         this.restTime = document.getElementById("time");
         // this.addEventListener("click", this.clickHole);
         // this.clickHandler = this.clickHandler.bind(this);
@@ -12,28 +11,24 @@ class Game{
 
     startGame(){
         let currentScore = 0;
+        let currentTime = 60;
         this.gameStart.addEventListener("click", function(){alert("u click start!")});
         // this.showLoopy();
+        this.timer();
         setInterval(this.showLoopy, 2000);
-        this.clickHole(currentScore);
+        this.clickLoopy(currentScore);
     }
-//     setRandomLoopy(params) {
-//         let loopy = document.
-//     }
 
-    clickHole(currentScore){
+    clickLoopy(currentScore){
         let loopyList = document.querySelectorAll(".loopy");
         loopyList.forEach(ele=>{
             ele.addEventListener("click", function(){
-                alert("click loopy!");
+                // alert("click loopy!");
                 currentScore += 1;
-                this.score.innerText = currentScore.toString();
+                document.getElementById("score").innerText = currentScore.toString();
 
             }
         )});
-
-            // document.getElementById("score").innerText = score.toString();
-
     }
 
 //function to get random number between 0-5, for select random hole
@@ -53,7 +48,7 @@ class Game{
         setTimeout(function(){
             loopy.classList.add("hidden");
             loopy.classList.remove("showUp");
-        },3000);
+        },1000);
     }
 
     // hideLoopy(ele){
@@ -62,6 +57,16 @@ class Game{
     //         ele.classList.remove("showUp");
     //     },3000);
     // }
+
+    timer(){
+        let currentTime = Number(document.getElementById("time").innerHTML.slice(0,2));
+        setInterval(function(){
+            if(currentTime >0){
+                currentTime -= 1;
+                document.getElementById("time").innerText = currentTime.toString()+" s";
+            }
+        }, 1000);
+    }
 
 }
 
