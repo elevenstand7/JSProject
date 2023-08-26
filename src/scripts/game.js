@@ -4,16 +4,26 @@ class Game{
         this.restTime = document.getElementById("time");
         this.score = document.getElementById("score");
         this.startGame();
+        this.gameOver = false;
+        this.timer;
+        this.loopyState;
     }
 
 
     startGame(){
         let currentScore = 0;
-        this.gameStart.addEventListener("click", function(){alert("u click start!")});
-        // this.showLoopy();
-        this.timer();
-        setInterval(this.showLoopy, 2000);
-        this.clickLoopy(currentScore);
+        this.gameStart.addEventListener("click", ()=>{
+           console.log("Game Start!");
+           if(this.timer) clearInterval(this.timer);
+            this.countDown();
+            this.loopyState = setInterval(this.showLoopy, 2000);
+            this.clickLoopy(currentScore);
+
+        });
+
+        // this.timer();
+        // setInterval(this.showLoopy, 2000);
+        // this.clickLoopy(currentScore);
         // alert("Game over!")
 
 
@@ -32,10 +42,6 @@ class Game{
         )});
     }
 
-//function to get random number between 0-5, for select random hole
-    // getRandomHole(){
-    //     return Math.floor(Math.random()*6)
-    // };
 
     showLoopy(){
         let randomNum =  Math.floor(Math.random()*6);
@@ -52,29 +58,23 @@ class Game{
         },1000);
     }
 
-    // hideLoopy(ele){
-    //     setTimeout(function(){
-    //         ele.classList.add("hidden");
-    //         ele.classList.remove("showUp");
-    //     },3000);
-    // }
 
-    timer(){
+
+    countDown(){
         let currentTime = Number(this.restTime.innerHTML.slice(0,2));
-        let countDown = setInterval(()=>{
+        this.timer = setInterval(()=>{
             if(currentTime !== 0){
-                currentTime -= 1;
+                currentTime --;
                 this.restTime.innerText = currentTime.toString() +"s";
             }else{
-                // alert("Game over!");
-                // clearInterval(countDown);
+                    this.gameOver = true;
+                    console.log("timer");
+                    clearInterval(this.timer);
+                    clearInterval(this.loopyState);
             }
         }, 1000);
     }
 
-    gameOver(){
-
-    }
 
 }
 
