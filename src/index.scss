@@ -12,7 +12,7 @@ h1{
 body{
     border: 5px solid white;
     border-radius: 100px;
-    background: #ffc4c4;
+    background: #FFE5E5;
     // background: #FCAEAE;
     margin: 50px 50px 50px 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
@@ -23,10 +23,6 @@ body{
 li{
     list-style: none;
 }
-// .game-board{
-//     cursor: url('../images/mallet1-removebg-preview.png'), auto;
-// }
-
 
 .btn{
     background-color: #E1ECC8;
@@ -38,12 +34,19 @@ li{
 }
 
 .container{
-    text-align:center;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    height: 60px;
+    border: 3px solid #7A9D54;
+    border-radius: 20px;
 }
 .controller-menu{
+    margin-left: 10px;
     text-align: center;
-    display: inline-block;
-
+    display: flex;
 }
 
 .display{
@@ -51,8 +54,19 @@ li{
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 1.5rem;
     color: #FF6666;
-    display: inline-block;
+    display: flex;
     // margin: 20px;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    // border: 2px solid;
+    font-size: 35px;
+    width: 50px;
+    height: 30px;
+    margin-right: 35px;
+    // color: #A0C49D;
 }
 
 .farm{
@@ -142,4 +156,9 @@ li{
     width: 70%;
     height: auto;
     margin-bottom: 10px;
+  }
+
+  .fa-brands{
+    color: #FF6666;
+    margin-right: 5px;
   }

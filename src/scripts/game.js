@@ -3,10 +3,10 @@ class Game{
         this.gameStart = document.getElementById("start");
         this.restTime = document.getElementById("time");
         this.score = document.getElementById("score");
-        this.startGame();
         this.gameOver = false;
         this.timer;
         this.loopyState;
+        this.startGame();
     }
 
 
@@ -20,13 +20,6 @@ class Game{
             this.clickLoopy(currentScore);
 
         });
-
-        // this.timer();
-        // setInterval(this.showLoopy, 2000);
-        // this.clickLoopy(currentScore);
-        // alert("Game over!")
-
-
     }
 
     clickLoopy(currentScore){
@@ -42,7 +35,6 @@ class Game{
         )});
     }
 
-
     showLoopy(){
         let randomNum =  Math.floor(Math.random()*6);
         let loopyList = document.querySelectorAll(".loopy");
@@ -57,8 +49,6 @@ class Game{
             loopy.classList.remove("showUp");
         },1000);
     }
-
-
 
     countDown(){
         let currentTime = Number(this.restTime.innerHTML.slice(0,2));
