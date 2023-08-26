@@ -24,6 +24,7 @@ class Game{
         loopyList.forEach(ele=>{
             ele.addEventListener("click", ()=>{
                 // alert("click loopy!");
+                console.log('click loopy!');
                 currentScore += 1;
                 this.score.innerText = currentScore.toString();
 

@@ -1,21 +1,30 @@
+// html{
+//     height: 343px;
+// }
 h1{
     text-align: center;
     font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 5rem;
+    font-size: 4rem;
     color: #7A9D54;
+    margin: 30px;
 }
 
 body{
-    background-image: url("../images/background1.jpeg");
-    background-size:cover;
+    border: 5px solid white;
+    border-radius: 100px;
+    background: #ffc4c4;
+    margin: 50px 50px 50px 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+    // background-image: url("../images/background1.jpeg");
+    // background-size:cover;
 }
 
 li{
     list-style: none;
 }
-.game-board{
-    cursor: url('../images/mallet1-removebg-preview.png'), auto;
-}
+// .game-board{
+//     cursor: url('../images/mallet1-removebg-preview.png'), auto;
+// }
 
 
 .btn{
@@ -27,11 +36,12 @@ li{
     margin: 10px;
 }
 
-// .container{
-//     display:inline-block;
-// }
+.container{
+    text-align:center;
+}
 .controller-menu{
     text-align: center;
+    display: inline-block;
 
 }
 
@@ -39,24 +49,26 @@ li{
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 1.5rem;
     color: #FF6666;
-
+    display: inline-block;
+    // margin: 20px;
 }
 
 .farm{
-
+    cursor: url('../images/mallet1-removebg-preview.png')50 60, auto;
     display: flex;
     flex-wrap: wrap;
     margin: 30px auto;
-    width: 920px;
-    height: 540px;
-
+    width: 800px;
+    height: 450px;
+    // width: 60%;
+    // height: 70%;
     background-image: url("../images/grass.png");
     background-size: cover;
 }
 
 .hole{
     float: left;
-    width: 235px;
+    width: 200px;
     height:100px;
     // width: 20%;
     // height: 20%;
@@ -71,8 +83,8 @@ li{
 .loopy{
     position: relative;
     border: 2px solid;
-    // margin-top: -35px;
-    // margin-left: 60px;
+    margin-top: -50px;
+    margin-left: 50px;
     width: 100px;
     height:100px;
     background-size: contain;
@@ -112,3 +124,18 @@ li{
         height: 0;
       }
 }
+
+.cute_zhuzhuILoveU {
+    position: fixed;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+
+  }
+
+  .cute_zhuzhuILoveU img {
+    width: 70%;
+    height: auto;
+    margin-bottom: 10px;
+  }
