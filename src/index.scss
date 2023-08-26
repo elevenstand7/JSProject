@@ -13,6 +13,7 @@ body{
     border: 5px solid white;
     border-radius: 100px;
     background: #ffc4c4;
+    // background: #FCAEAE;
     margin: 50px 50px 50px 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
     // background-image: url("../images/background1.jpeg");
@@ -46,6 +47,7 @@ li{
 }
 
 .display{
+    text-align: center;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 1.5rem;
     color: #FF6666;
@@ -82,46 +84,48 @@ li{
 
 .loopy{
     position: relative;
-    border: 2px solid;
+    // border: 2px solid;
     margin-top: -50px;
     margin-left: 50px;
     width: 100px;
     height:100px;
     background-size: contain;
     background-image: url("../images/loopy-removebg-preview.png");
+    transform-origin: center bottom;
+    transform: scaleY(0);
 }
 
 
-.show{
+.showUp{
     animation-name: showUp;
-    animation-duration: 2s;
-    animation-fill-mode: both;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes showUp {
     from {
-        height: 0;
+        transform: scaleY(0);
       }
 
       to {
-        height: 50px;
+        transform: scaleY(1);
       }
 }
 
 
 .hidden{
     animation-name: hide;
-    animation-duration: 0.2s;
-    animation-fill-mode: both;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes hide {
     from {
-        height: 50px;
+        transform: scaleY(1);
       }
 
       to {
-        height: 0;
+        transform: scaleY(0);
       }
 }
 
