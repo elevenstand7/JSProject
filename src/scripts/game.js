@@ -62,6 +62,13 @@ class Game{
                     console.log("timer");
                     clearInterval(this.timer);
                     clearInterval(this.loopyState);
+                    let endPage = document.getElementById("game-end");
+                    document.getElementById("result").innerHTML = `Your score is ${this.score.innerText}!`;
+                    // const p =document.createElement("p");
+                    // p.innerText =  this.score.innerText;
+                    // res.append(p);
+
+                    endPage.showModal();
             }
         }, 1000);
     }

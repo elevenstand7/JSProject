@@ -18,6 +18,10 @@ function(){
         introPage.close();
         console.log("Game Start!");
         const game = new Game();
+        // if(game.restTime === 0){
+        //     let endPage = document.getElementById("game-end");
+        //     endPage.showModal();
+        // }
     // const gameStart = document.getElementById("start");
     // gameStart.addEventListener("click", function(){alert("u click start!")});
 }
