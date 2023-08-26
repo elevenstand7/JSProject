@@ -1,6 +1,7 @@
 class Game{
     constructor(){
-        this.gameStart = document.getElementById("start");
+        // this.gameStart = document.getElementById("start");
+        // this.gameStop= document.getElementById("stop");
         this.restTime = document.getElementById("time");
         this.score = document.getElementById("score");
         this.gameOver = false;
@@ -12,14 +13,14 @@ class Game{
 
     startGame(){
         let currentScore = 0;
-        this.gameStart.addEventListener("click", ()=>{
-           console.log("Game Start!");
-           if(this.timer) clearInterval(this.timer);
-            this.countDown();
-            this.loopyState = setInterval(this.showLoopy, 2000);
-            this.clickLoopy(currentScore);
+        // this.gameStart.addEventListener("click", ()=>{
+        //    console.log("Game Start!");
+        if(this.timer) clearInterval(this.timer);
+        this.countDown();
+        this.loopyState = setInterval(this.showLoopy, 2000);
+        this.clickLoopy(currentScore);
 
-        });
+        // });
     }
 
     clickLoopy(currentScore){
@@ -65,6 +66,11 @@ class Game{
         }, 1000);
     }
 
+    stopGame(){
+        this.gameStop.addEventListener("click", ()=>{
+            alert("stop");
+        }
+    )};
 
 }
 

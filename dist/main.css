@@ -9,6 +9,13 @@ h1 {
   margin: 30px;
 }
 
+h2 {
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #7A9D54;
+  font-size: 2rem;
+}
+
 body {
   border: 5px solid white;
   border-radius: 100px;
@@ -21,6 +28,24 @@ li {
   list-style: none;
 }
 
+dialog {
+  position: fixed;
+  height: 400px;
+  width: 800px;
+  border: 2.5px solid #A0C49D;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #FAF1E4;
+  background-color: #FFF2F2;
+}
+
+p {
+  text-align: left;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.5rem;
+  color: #7A9D54;
+  background-color: FAF1E4;
+}
+
 .btn {
   background-color: #E1ECC8;
   border-radius: 12px;
@@ -28,6 +53,8 @@ li {
   padding: 15px 32px;
   font-size: 16px;
   margin: 10px;
+  text-align: center;
+  float: right;
 }
 
 .container {
@@ -142,4 +169,8 @@ li {
 .fa-brands {
   color: #FF6666;
   margin-right: 5px;
+}
+
+.hide {
+  display: none;
 }

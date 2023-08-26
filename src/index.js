@@ -11,11 +11,17 @@ import Game from "./scripts/game";
 document.addEventListener("DOMContentLoaded",
 function(){
     console.log("hello world!");
-    const game = new Game();
+    let introPage = document.getElementById("game-start");
+    introPage.showModal();
+    let gameStart = document.getElementById("start");
+        gameStart.addEventListener("click", ()=>{
+        introPage.close();
+        console.log("Game Start!");
+        const game = new Game();
     // const gameStart = document.getElementById("start");
     // gameStart.addEventListener("click", function(){alert("u click start!")});
 }
-);
+)});
 
 
 
