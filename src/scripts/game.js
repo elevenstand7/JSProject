@@ -1,3 +1,5 @@
+const backgroundMusic = new Audio('./src/audio/music.mp3');
+
 class Game{
     constructor(gameScore, gameTime){
         this.restTime = gameTime;
@@ -17,8 +19,7 @@ class Game{
         this.countDown();
         this.loopyState = setInterval(this.showLoopy, 2000);
         this.clickLoopy(currentScore);
-
-        // });
+        backgroundMusic.play();
     }
 
     clickLoopy(currentScore){

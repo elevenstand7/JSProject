@@ -92,13 +92,13 @@ p {
 }
 
 .farm {
-  cursor: url("../images/mallet1-removebg-preview.png") 50 60, auto;
+  cursor: url("../assets/images/mallet1-removebg-preview.png") 50 60, auto;
   display: flex;
   flex-wrap: wrap;
   margin: 30px auto;
   width: 800px;
   height: 450px;
-  background-image: url("../images/grass.png");
+  background-image: url("../assets/images/grass3.png");
   background-size: cover;
 }
 
@@ -109,7 +109,7 @@ p {
   margin-top: 120px;
   margin-left: 30px;
   background-size: contain;
-  background-image: url("../images/hole.png");
+  background-image: url("../assets/images/hole.png");
 }
 
 .loopy {
@@ -119,7 +119,7 @@ p {
   width: 100px;
   height: 100px;
   background-size: contain;
-  background-image: url("../images/loopy-removebg-preview.png");
+  background-image: url("../assets/images/loopy-removebg-preview.png");
   transform-origin: center bottom;
   transform: scaleY(0);
 }

@@ -97,7 +97,7 @@ dialog{
 }
 
 .farm{
-    cursor: url('../images/mallet1-removebg-preview.png')50 60, auto;
+    cursor: url('../assets/images/mallet1-removebg-preview.png')50 60, auto;
     display: flex;
     flex-wrap: wrap;
     margin: 30px auto;
@@ -105,7 +105,7 @@ dialog{
     height: 450px;
     // width: 60%;
     // height: 70%;
-    background-image: url("../images/grass.png");
+    background-image: url("../assets/images/grass3.png");
     background-size: cover;
 }
 
@@ -120,7 +120,7 @@ dialog{
 
     // border: 2px solid;
     background-size: contain;
-    background-image: url("../images/hole.png");
+    background-image: url("../assets/images/hole.png");
 }
 
 .loopy{
@@ -131,7 +131,7 @@ dialog{
     width: 100px;
     height:100px;
     background-size: contain;
-    background-image: url("../images/loopy-removebg-preview.png");
+    background-image: url("../assets/images/loopy-removebg-preview.png");
     transform-origin: center bottom;
     transform: scaleY(0);
 }
