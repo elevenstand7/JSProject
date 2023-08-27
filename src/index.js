@@ -2,15 +2,10 @@
 // import View from "./scripts/game-view";
 import Game from "./scripts/game";
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const game = new Game();
-//     const rootEl = document.querySelector(".game-board");
-//     new View(game, rootEl);
-//   });
 
 document.addEventListener("DOMContentLoaded",
 function(){
-    console.log("hello world!");
+
     let introPage = document.getElementById("game-start");
     introPage.showModal();
     const gameScore = document.getElementById("score");
@@ -25,11 +20,13 @@ function(){
     });
 
     let reStart = document.getElementById("restart");
+
     reStart.addEventListener("click", ()=>{
         let endPage = document.getElementById("game-end");
         endPage.close();
         document.getElementById("score").innerHTML = '0';
         document.getElementById("time").innerHTML = '10s';
+        document.querySelector(".music-img").src = './assets/images/on.png';
         const game = new Game(gameScore, gameTime);
     })
 });

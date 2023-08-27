@@ -74,6 +74,18 @@ p {
   display: flex;
 }
 
+.music {
+  background-color: #FFE5E5;
+  border: 3px solid #7A9D54;
+  border-radius: 20px;
+}
+
+.music-img {
+  width: 30px;
+  height: 70%;
+  background-color: #FFE5E5;
+}
+
 .display {
   text-align: center;
   font-family: "Comic Sans MS", cursive, sans-serif;
@@ -169,8 +181,4 @@ p {
 .fa-brands {
   color: #FF6666;
   margin-right: 5px;
-}
-
-.hide {
-  display: none;
 }
