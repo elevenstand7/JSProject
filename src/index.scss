@@ -7,6 +7,22 @@ h1{
     margin: 30px;
 }
 
+h1 span{
+    display: inline-block;
+    animation: .4s jump ease-in-out;
+    animation-delay: var(--delay);
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 h2{
     text-align: center;
     font-family: "Comic Sans MS", cursive, sans-serif;
@@ -31,14 +47,16 @@ li{
 
 dialog{
     position: fixed;
-    height: 400px;
+    height: 350px;
     width: 800px;
     border: 2.5px solid #A0C49D;
     border-radius: 30px;
     box-shadow: 0 0 10px #FAF1E4;
     background-color: #FFF2F2;
+    background-image: url("../assets/images/background1.jpeg");
+    background-size:contain;
+}
 
- }
 
  p{
     text-align: left;
@@ -53,10 +71,11 @@ dialog{
     border-radius: 12px;
     border: 2px solid #A0C49D;
     padding: 15px 32px;
-    font-size: 16px;
+    font-size: 20px;
     margin: 10px;
     text-align: center;
     float: right;
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .container{
@@ -180,7 +199,7 @@ dialog{
       }
 }
 
-.cute_zhuzhuILoveU {
+.cute_loopy {
     position: fixed;
     display: flex;
     left: 0;
@@ -189,7 +208,7 @@ dialog{
 
   }
 
-  .cute_zhuzhuILoveU img {
+  .cute_loopy img {
     width: 70%;
     height: auto;
     margin-bottom: 10px;
@@ -200,4 +219,7 @@ dialog{
     margin-right: 5px;
   }
 
-
+// #game-start{
+//     background-image: url("../assets/images/background1.jpeg");
+//     background-size:contain;
+// }

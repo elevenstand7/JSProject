@@ -5,6 +5,16 @@ import Game from "./scripts/game";
 
 document.addEventListener("DOMContentLoaded",
 function(){
+    const title = document.querySelector("h1");
+    title.innerHTML = title.textContent.replace(/\S/g, "<span class='title-char'>$&</span>");
+
+    document.querySelectorAll(".title-char").forEach(
+        (ele, idx)=>{
+            // idx += 50
+            ele.style.setProperty('--delay', `${idx *0.1}s`)
+        }
+    )
+
 
     let introPage = document.getElementById("game-start");
     introPage.showModal();
