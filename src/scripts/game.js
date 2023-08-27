@@ -1,9 +1,7 @@
 class Game{
-    constructor(){
-        // this.gameStart = document.getElementById("start");
-        // this.gameStop= document.getElementById("stop");
-        this.restTime = document.getElementById("time");
-        this.score = document.getElementById("score");
+    constructor(gameScore, gameTime){
+        this.restTime = gameTime;
+        this.score = gameScore;
         this.gameOver = false;
         this.timer;
         this.loopyState;

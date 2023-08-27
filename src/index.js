@@ -13,19 +13,26 @@ function(){
     console.log("hello world!");
     let introPage = document.getElementById("game-start");
     introPage.showModal();
+    const gameScore = document.getElementById("score");
+    const gameTime = document.getElementById("time");
+
     let gameStart = document.getElementById("start");
-        gameStart.addEventListener("click", ()=>{
+
+    gameStart.addEventListener("click", ()=>{
         introPage.close();
         console.log("Game Start!");
-        const game = new Game();
-        // if(game.restTime === 0){
-        //     let endPage = document.getElementById("game-end");
-        //     endPage.showModal();
-        // }
-    // const gameStart = document.getElementById("start");
-    // gameStart.addEventListener("click", function(){alert("u click start!")});
-}
-)});
+        const game = new Game(gameScore, gameTime);
+    });
+
+    let reStart = document.getElementById("restart");
+    reStart.addEventListener("click", ()=>{
+        let endPage = document.getElementById("game-end");
+        endPage.close();
+        document.getElementById("score").innerHTML = '0';
+        document.getElementById("time").innerHTML = '10s';
+        const game = new Game(gameScore, gameTime);
+    })
+});
 
 
 
