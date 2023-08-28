@@ -30,8 +30,9 @@ class Game{
         this.gameTime.innerText = this.time + 's';
         this.restTime = setInterval(this.countDown.bind(this), 1000);
         this.showRandomLoopy();
+
         backgroundMusic.play();
-        this.evilLoopyTimer = setInterval(this.showEvilLoopy.bind(this), 4000);
+        this.evilLoopyTimer = setInterval(this.showEvilLoopy.bind(this), 2000);
 
         const musicImageList = ['./assets/images/on.png', './assets/images/off.png']
         const musicBtn = document.querySelector(".music");
@@ -79,16 +80,17 @@ class Game{
 
     showEvilLoopy(){
         console.log("evil loopy!")
-        console.log(this.loopyList)
+        // console.log(this.loopyList)
         const randomIdx = Math.floor(Math.random() * this.loopyList.length);
         // if(this.loopyList[randomIdx].isVisible){
         const evilLoopy = this.loopyList[randomIdx];
         setInterval(()=>{
             evilLoopy.changeEvil();
+            setInterval(()=>{
+                evilLoopy.changeNormal();
+            },4000)
         }, 2000)
-        setInterval(()=>{
-            evilLoopy.changeNormal();
-        }, 4000)
+
     }
 
     gameOver(){
