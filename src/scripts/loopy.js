@@ -32,6 +32,13 @@ class Loopy{
             }, 600);
         }
     }
+
+    changeEvil(){
+        this.element.src = './assets/images/evil-loopy.png';
+    }
+    changeNormal(){
+        this.element.src = './assets/images/loopy-removebg-preview.png';
+    }
 }
 
 

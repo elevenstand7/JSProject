@@ -32,6 +32,7 @@ function(){
     reStart.addEventListener("click", ()=>{
         let endPage = document.getElementById("game-end");
         endPage.close();
+        document.querySelector(".music-img").src = './assets/images/on.png';
         game.reStart();
     })
 });

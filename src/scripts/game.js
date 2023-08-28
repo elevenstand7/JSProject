@@ -16,26 +16,26 @@ class Game{
         // this.startGame();
         this.gameScore = document.getElementById("score");
         this.gameTime = document.getElementById("time");
+        // this.loopy = document.querySelectorAll(".loopy");
 
         document.querySelectorAll(".loopy").forEach(loopy=>{
-            this.loopyList.push(new Loopy(loopy, this.updateScore.bind(this)))
+            this.loopyList.push(new Loopy(loopy, this.updateScore.bind(this)));
         });
     }
 
     start(){
         document.getElementById("game-start").close();
-        this.time = 10;
+        this.time = 30;
         this.score = 1;
         this.gameTime.innerText = this.time + 's';
-        this.timer = setInterval(this.countDown.bind(this), 1000);
+        this.restTime = setInterval(this.countDown.bind(this), 1000);
         this.showRandomLoopy();
         backgroundMusic.play();
+        this.evilLoopyTimer = setInterval(this.showEvilLoopy.bind(this), 4000);
 
-        const musicImg = document.querySelector(".music-img");
-        musicImg.src = './assets/images/on.png';
-
-        const musicBtn = document.querySelector(".music");
         const musicImageList = ['./assets/images/on.png', './assets/images/off.png']
+        const musicBtn = document.querySelector(".music");
+
         let currentImgIdx = 0;
 
         musicBtn.addEventListener("click",()=>{
@@ -43,12 +43,14 @@ class Game{
             currentImgIdx = (currentImgIdx+1) % musicImageList.length;
             const nextImg = musicImageList[currentImgIdx];
 
+
+            const musicImg = document.querySelector(".music-img");
             musicImg.src = nextImg;
 
             if(currentImgIdx === 1)  backgroundMusic.pause();
             if(currentImgIdx === 0)  backgroundMusic.play();
-
         });
+
     }
 
     countDown(){
@@ -70,12 +72,28 @@ class Game{
 
     showRandomLoopy(){
         let randomLoopy = this.loopyList[Math.floor(Math.random() * this.loopyList.length)];
+        // console.log(randomLoopy.src)
         randomLoopy.show();
         setTimeout(() => randomLoopy.hide(),2000);
     }
 
+    showEvilLoopy(){
+        console.log("evil loopy!")
+        console.log(this.loopyList)
+        const randomIdx = Math.floor(Math.random() * this.loopyList.length);
+        // if(this.loopyList[randomIdx].isVisible){
+        const evilLoopy = this.loopyList[randomIdx];
+        setInterval(()=>{
+            evilLoopy.changeEvil();
+        }, 2000)
+        setInterval(()=>{
+            evilLoopy.changeNormal();
+        }, 4000)
+    }
+
     gameOver(){
-        clearInterval(this.timer);
+        clearInterval(this.restTime);
+        // clearInterval(this.evilLoopyTimer);
         document.getElementById("result").innerHTML = `Your score is ${this.score}!`;
         document.getElementById("game-end").showModal();
         backgroundMusic.pause();
