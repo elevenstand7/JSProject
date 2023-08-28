@@ -9,7 +9,7 @@ h1 {
   margin: 30px;
 }
 
-h1 span {
+h2 span {
   display: inline-block;
   animation: 0.4s jump ease-in-out;
   animation-delay: var(--delay);
@@ -44,14 +44,12 @@ li {
 
 dialog {
   position: fixed;
-  height: 350px;
+  height: 400px;
   width: 800px;
   border: 2.5px solid #A0C49D;
   border-radius: 30px;
   box-shadow: 0 0 10px #FAF1E4;
   background-color: #FFF2F2;
-  background-image: url("../assets/images/background1.jpeg");
-  background-size: contain;
 }
 
 p {
@@ -198,4 +196,20 @@ p {
 .fa-brands {
   color: #FF6666;
   margin-right: 5px;
+}
+
+.dazedEffect {
+  animation: dazed 0.2s ease-in-out 3;
+}
+
+@keyframes dazed {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
 }

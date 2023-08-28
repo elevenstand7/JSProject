@@ -7,7 +7,7 @@ h1{
     margin: 30px;
 }
 
-h1 span{
+h2 span{
     display: inline-block;
     animation: .4s jump ease-in-out;
     animation-delay: var(--delay);
@@ -17,7 +17,6 @@ h1 span{
     0%, 100% {
         transform: translateY(0px);
     }
-
     50% {
         transform: translateY(-10px);
     }
@@ -37,8 +36,6 @@ body{
     // background: #FCAEAE;
     margin: 50px 50px 50px 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
-    // background-image: url("../images/background1.jpeg");
-    // background-size:cover;
 }
 
 li{
@@ -47,14 +44,14 @@ li{
 
 dialog{
     position: fixed;
-    height: 350px;
+    height: 400px;
     width: 800px;
     border: 2.5px solid #A0C49D;
     border-radius: 30px;
     box-shadow: 0 0 10px #FAF1E4;
     background-color: #FFF2F2;
-    background-image: url("../assets/images/background1.jpeg");
-    background-size:contain;
+    // background-image: url("../assets/images/background1.jpeg");
+    // background-size:contain;
 }
 
 
@@ -143,12 +140,8 @@ dialog{
     float: left;
     width: 200px;
     height:100px;
-    // width: 20%;
-    // height: 20%;
     margin-top: 120px;
     margin-left: 30px;
-
-    // border: 2px solid;
     background-size: contain;
     background-image: url("../assets/images/hole.png");
 }
@@ -193,7 +186,6 @@ dialog{
     from {
         transform: scaleY(1);
       }
-
       to {
         transform: scaleY(0);
       }
@@ -208,18 +200,29 @@ dialog{
 
   }
 
-  .cute_loopy img {
+.cute_loopy img {
     width: 70%;
     height: auto;
     margin-bottom: 10px;
-  }
+}
 
-  .fa-brands{
+.fa-brands{
     color: #FF6666;
     margin-right: 5px;
-  }
+}
 
-// #game-start{
-//     background-image: url("../assets/images/background1.jpeg");
-//     background-size:contain;
-// }
+.dazedEffect{
+    animation: dazed .2s ease-in-out 3;
+}
+
+@keyframes dazed {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate(15deg);
+    }
+}

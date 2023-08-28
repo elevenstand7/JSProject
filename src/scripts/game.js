@@ -1,3 +1,5 @@
+import Loopy from "./loopy";
+
 const backgroundMusic = new Audio('./src/audio/music.mp3');
 
 backgroundMusic.addEventListener("ended", ()=>{
@@ -6,41 +8,42 @@ backgroundMusic.addEventListener("ended", ()=>{
 
 class Game{
     constructor(gameScore, gameTime){
-        this.restTime = gameTime;
-        this.score = gameScore;
-        this.timer;
-        this.loopyState;
-        this.startGame();
+        this.restTime = null;
+        this.score = 0;
+        this.time = 0;
+        this.loopyShowTime = 2000;
+        this.loopyList = [];
+        // this.startGame();
+        this.gameScore = document.getElementById("score");
+        this.gameTime = document.getElementById("time");
+
+        document.querySelectorAll(".loopy").forEach(loopy=>{
+            this.loopyList.push(new Loopy(loopy, this.updateScore.bind(this)))
+        });
     }
 
+    start(){
+        document.getElementById("game-start").close();
+        this.time = 10;
+        this.score = 1;
+        this.gameTime.innerText = this.time + 's';
+        this.timer = setInterval(this.countDown.bind(this), 1000);
+        this.showRandomLoopy();
+        backgroundMusic.play();
 
-    startGame(){
-        let currentScore = 0;
-        let musicOn = true;
+        const musicImg = document.querySelector(".music-img");
+        musicImg.src = './assets/images/on.png';
+
         const musicBtn = document.querySelector(".music");
-
         const musicImageList = ['./assets/images/on.png', './assets/images/off.png']
         let currentImgIdx = 0;
 
-        if(this.timer) clearInterval(this.timer);
-
-        this.countDown();
-        this.loopyState = setInterval(this.showLoopy, 2000);
-        this.clickLoopy(currentScore);
-
-        backgroundMusic.play();
-
-
         musicBtn.addEventListener("click",()=>{
-
 
             currentImgIdx = (currentImgIdx+1) % musicImageList.length;
             const nextImg = musicImageList[currentImgIdx];
 
-
-            const musicImg = document.querySelector(".music-img");
             musicImg.src = nextImg;
-
 
             if(currentImgIdx === 1)  backgroundMusic.pause();
             if(currentImgIdx === 0)  backgroundMusic.play();
@@ -48,52 +51,131 @@ class Game{
         });
     }
 
-    clickLoopy(currentScore){
-        let loopyList = document.querySelectorAll(".loopy");
-        loopyList.forEach(ele=>{
-            ele.addEventListener("click", ()=>{
-
-                // console.log('click loopy!');
-                currentScore += 1;
-                this.score.innerText = currentScore.toString();
-
-            }
-        )});
-    }
-
-    showLoopy(){
-        let randomNum =  Math.floor(Math.random()*6);
-        let loopyList = document.querySelectorAll(".loopy");
-        let loopy = loopyList[randomNum];
-        loopy.classList.add("showUp");
-        loopy.classList.remove("hidden");
-
-
-        // this.hideLoopy(loopy);
-        setTimeout(function(){
-            loopy.classList.add("hidden");
-            loopy.classList.remove("showUp");
-        },1000);
-    }
-
     countDown(){
-        let currentTime = Number(this.restTime.innerHTML.slice(0,2));
-        this.timer = setInterval(()=>{
-            if(currentTime !== 0){
-                currentTime --;
-                this.restTime.innerText = currentTime.toString() +"s";
-            }else{
+        this.time--;
+        this.gameTime.innerText = this.time + 's';
 
-                    clearInterval(this.timer);
-                    clearInterval(this.loopyState);
-
-                    let endPage = document.getElementById("game-end");
-                    document.getElementById("result").innerHTML = `Your score is ${this.score.innerText}!`;
-
-                    endPage.showModal();
-            }
-        }, 1000);
+        if(this.time !== 0){
+            this.showRandomLoopy();
+        }else{
+            this.gameOver();
+        }
     }
+
+
+    updateScore(){
+        this.score+=1;
+        this.gameScore.innerText = this.score;
+    }
+
+    showRandomLoopy(){
+        let randomLoopy = this.loopyList[Math.floor(Math.random() * this.loopyList.length)];
+        randomLoopy.show();
+        setTimeout(() => randomLoopy.hide(),2000);
+    }
+
+    gameOver(){
+        clearInterval(this.timer);
+        document.getElementById("result").innerHTML = `Your score is ${this.score}!`;
+        document.getElementById("game-end").showModal();
+        backgroundMusic.pause();
+        backgroundMusic.currentTime = 0;
+    }
+
+    reStart(){
+        document.getElementById("game-end").close();
+        this.start();
+    }
+
+
+    // constructor(gameScore, gameTime){
+    //         this.restTime = gameTime;
+    //         this.score = gameScore;
+    //         this.timer;
+    //         this.loopyState;
+    //         this.startGame();
+    // }
+
+    // startGame(){
+    //     let currentScore = 0;
+    //     let musicOn = true;
+    //     const musicBtn = document.querySelector(".music");
+
+    //     const musicImageList = ['./assets/images/on.png', './assets/images/off.png']
+    //     let currentImgIdx = 0;
+
+    //     if(this.timer) clearInterval(this.timer);
+
+    //     this.countDown();
+    //     this.loopyState = setInterval(this.showLoopy, 2000);
+    //     this.clickLoopy(currentScore);
+
+    //     backgroundMusic.play();
+
+
+    //     musicBtn.addEventListener("click",()=>{
+
+
+    //         currentImgIdx = (currentImgIdx+1) % musicImageList.length;
+    //         const nextImg = musicImageList[currentImgIdx];
+
+
+    //         const musicImg = document.querySelector(".music-img");
+    //         musicImg.src = nextImg;
+
+
+    //         if(currentImgIdx === 1)  backgroundMusic.pause();
+    //         if(currentImgIdx === 0)  backgroundMusic.play();
+
+    //     });
+    // }
+
+    // clickLoopy(currentScore){
+    //     let loopyList = document.querySelectorAll(".loopy");
+    //     loopyList.forEach(ele=>{
+    //         ele.addEventListener("click", ()=>{
+
+    //             // console.log('click loopy!');
+    //             currentScore += 1;
+    //             this.score.innerText = currentScore.toString();
+
+    //         }
+    //     )});
+    // }
+
+    // showLoopy(){
+    //     let randomNum =  Math.floor(Math.random()*6);
+    //     let loopyList = document.querySelectorAll(".loopy");
+    //     let loopy = loopyList[randomNum];
+    //     loopy.classList.add("showUp");
+    //     loopy.classList.remove("hidden");
+
+
+    //     // this.hideLoopy(loopy);
+    //     setTimeout(function(){
+    //         loopy.classList.add("hidden");
+    //         loopy.classList.remove("showUp");
+    //     },1000);
+    // }
+
+    // countDown(){
+    //     let currentTime = Number(this.restTime.innerHTML.slice(0,2));
+    //     this.timer = setInterval(()=>{
+    //         if(currentTime !== 0){
+    //             currentTime --;
+    //             this.restTime.innerText = currentTime.toString() +"s";
+    //         }else{
+
+    //                 clearInterval(this.timer);
+    //                 clearInterval(this.loopyState);
+
+    //                 let endPage = document.getElementById("game-end");
+    //                 document.getElementById("result").innerHTML = `Your score is ${this.score.innerText}!`;
+
+    //                 endPage.showModal();
+    //         }
+    //     }, 1000);
+    // }
 
 
 }
