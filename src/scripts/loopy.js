@@ -28,7 +28,7 @@ class Loopy{
     hit(){
         if(this.isVisible && !this.isHit){
             if(this.isEvil){
-                console.log("hit evil loopy!")
+                // console.log("hit evil loopy!")
                 document.getElementById("hit-evil").innerHTML = "You hit the evil loopy!";
                 this.game.gameOver();
             }else{

@@ -85,13 +85,13 @@ class Game{
         const randomIdx = Math.floor(Math.random() * this.loopyList.length);
 
         const evilLoopy = this.loopyList[randomIdx];
-        console.log(this.hardOn)
+        // console.log(this.hardOn)
         if(this.hardOn){
             // console.log("evil loopy!")
             evilLoopy.changeEvil();
             setTimeout(()=>{
                 evilLoopy.changeNormal();
-            },4100)
+            },4000)
         }
 
     }

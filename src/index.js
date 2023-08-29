@@ -27,7 +27,7 @@ function(){
 
     gameStart.addEventListener("click", ()=>{
         introPage.close();
-        console.log("Game Start!");
+        // console.log("Game Start!");
         game.start();
     });
 
@@ -41,7 +41,7 @@ function(){
         game.reStart();
     })
     switchMode.addEventListener("click", ()=>{
-        console.log("hard mode");
+        // console.log("hard mode");
 
         hardGame.reStart();
     })
