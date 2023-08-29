@@ -29,6 +29,7 @@ class Loopy{
         if(this.isVisible && !this.isHit){
             if(this.isEvil){
                 console.log("hit evil loopy!")
+                document.getElementById("hit-evil").innerHTML = "You hit the evil loopy!";
                 this.game.gameOver();
             }else{
                 this.element.classList.add("dazedEffect");
@@ -49,7 +50,7 @@ class Loopy{
         this.isEvil = true;
     }
     changeNormal(){
-        this.element.src = './assets/images/loopy-removebg-preview.png';
+        this.element.src = './assets/images/normal-loopy.png';
         this.isEvil = false;
     }
 }

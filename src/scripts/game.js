@@ -25,6 +25,7 @@ class Game{
 
     start(){
         document.getElementById("game-start").close();
+        document.getElementById("hit-evil").innerHTML = "";
         this.time = 10;
         this.score = 0;
         this.gameTime.innerText = this.time + 's';
@@ -86,12 +87,10 @@ class Game{
         console.log(this.hardOn)
         if(this.hardOn){
             // console.log("evil loopy!")
-            let hardTimer = setInterval(()=>{
-                evilLoopy.changeEvil();
-                setInterval(()=>{
-                    evilLoopy.changeNormal();
-                },4000)
-            }, 2000)
+            evilLoopy.changeEvil();
+            setTimeout(()=>{
+                evilLoopy.changeNormal();
+            },4000)
         }
 
     }
