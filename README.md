@@ -1,8 +1,8 @@
 ## Background
 
-"Whack-a-Mole" is a popular arcade game that was invented in the early 1970s. It is very simple, but highly entertaining, and as a result, it has been loved by people of all ages for decades. The game follows these rules:
+"Whack-a-Loopy" is a Whack-a-Mole" like game, which is a popular arcade game that was invented in the early 1970s. It is very simple, but highly entertaining, and as a result, it has been loved by people of all ages for decades. The game follows these rules:
 
-- In the game, you'll find a game surface that resembles a farm, complete with multiple holes. Moles will unpredictably emerge from these holes.
+- In the game, you'll find a game surface that resembles a farm, complete with multiple holes. Loopies will unpredictably emerge from these holes.
 
 - Players have control over a mallet, and their objective is to strike the moles as they pop up, earning points for each successful hit.
 
@@ -11,12 +11,12 @@
 
 ## Functionality & MVPs
 
-With this Whack-a-Mole Game, users will be able to:
+With this Whack-a-Loopy Game, users will be able to:
 
-* See a game introduction screen and has a difficulty level selection(bonus);
-* Start, pause, resume, and restart the game;
-* Has a countdown timer and a score display;
-* Has background music, can be mute and unmute(bonus)
+* See a game introduction pop-up when user open the web page;
+* Click "start",  user can close the intro page and enter the game;
+* Has a countdown timer, a score display and mute/unmute for the background music;
+* Has hard mode selection when user finished the easy mode;
 
 In addition, this project will include:
 * A production README
@@ -27,25 +27,22 @@ In addition, this project will include:
 
 ![Alt text](image.png)
 
- Before the user begins playing the game, a popup window will appear, providing a game introduction and allowing for the selection of the game's difficulty level.
+*   Before the user begins playing the game, a popup window will appear, providing a game introduction and a start button to user.
 
-*   Navigation links will include direct links to this project's Github repository, my LinkedIn profile, and AngelList.
+*   Game container will include a music mute/unmute button, timer, score display and Navigation links. Navigation links will include direct links to this project's Github repository and my LinkedIn profile.
 
-*   Game controls will feature buttons for functions such as Start, Stop, Continue, and Restart.
-
-*   The background music mute and unmute button(bonus)
+*   Game board will have holes and the loopy will pop up form the hole. The cursor will be a mallet.
 
 
 ## Technologies, Libraries, APIs
 
 This project will be implemented with the following technologies:
 
-*   The Canvas API to render the game
 *   DOM Manipulation to handle events, update scores, and manage game states
 *   npm to manage project dependencies
 *   Webpack to bundle the source JavaScript code
-*   Animation may be apply to the animation of the game
-*   Audio API may be apply to the background music(bonus)
+*   Animation to the animation of the game
+*   Audio API to the background music
 
 ## Implementation Timeline
 
@@ -60,6 +57,6 @@ This project will be implemented with the following technologies:
 *   **Wednesday Morning:** Deploy to GitHub pages. If time, rewrite this proposal as a production README.
 
 ## Bonus features
-*   Add difficulty level selection(In hard mode, there will be bombs that reduce the scores.)
+*   Add difficulty level selection(In hard mode, there will be evil loopy that once hit will end the game.)
 *   Add audio feature
 

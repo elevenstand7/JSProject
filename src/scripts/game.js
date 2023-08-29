@@ -25,6 +25,7 @@ class Game{
 
     start(){
         document.getElementById("game-start").close();
+        this.gameScore.innerHTML = "0";
         document.getElementById("hit-evil").innerHTML = "";
         this.time = 10;
         this.score = 0;
@@ -90,7 +91,7 @@ class Game{
             evilLoopy.changeEvil();
             setTimeout(()=>{
                 evilLoopy.changeNormal();
-            },4000)
+            },4100)
         }
 
     }

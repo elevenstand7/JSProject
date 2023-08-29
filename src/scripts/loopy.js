@@ -40,7 +40,7 @@ class Loopy{
                 setTimeout(()=>{
                     this.element.classList.remove("dazedEffect");
                     this.isHit = false;
-                }, 600);
+                }, 300);
             }
         }
     }
