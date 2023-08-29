@@ -26,6 +26,7 @@ class Game{
     start(){
         document.getElementById("game-start").close();
         this.gameScore.innerHTML = "0";
+        // document.querySelector(".music-img") = './assets/images/on.png';
         document.getElementById("hit-evil").innerHTML = "";
         this.time = 10;
         this.score = 0;
@@ -107,6 +108,7 @@ class Game{
 
     reStart(){
         document.getElementById("game-end").close();
+        document.querySelector(".music-img").src = './assets/images/on.png';
         this.start();
     }
 
