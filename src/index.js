@@ -18,8 +18,12 @@ function(){
     introPage.showModal();
     const gameScore = document.getElementById("score");
     const gameTime = document.getElementById("time");
-    const game = new Game(gameScore, gameTime);
+
+    const game = new Game(false);
+    const hardGame = new Game(true);
+
     let gameStart = document.getElementById("start");
+
 
     gameStart.addEventListener("click", ()=>{
         introPage.close();
@@ -28,6 +32,7 @@ function(){
     });
 
     let reStart = document.getElementById("restart");
+    let switchMode = document.getElementById("hard");
 
     reStart.addEventListener("click", ()=>{
         let endPage = document.getElementById("game-end");
@@ -35,6 +40,12 @@ function(){
         document.querySelector(".music-img").src = './assets/images/on.png';
         game.reStart();
     })
+    switchMode.addEventListener("click", ()=>{
+        console.log("hard mode");
+
+        hardGame.reStart();
+    })
+
 });
 
 
