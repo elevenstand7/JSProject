@@ -19,7 +19,7 @@ class Game{
         this.gameTime = document.getElementById("time");
 
         document.querySelectorAll(".loopy").forEach(loopy=>{
-            this.loopyList.push(new Loopy(loopy, this.updateScore.bind(this)));
+            this.loopyList.push(new Loopy(loopy, this.updateScore.bind(this), this));
         });
     }
 
@@ -72,7 +72,7 @@ class Game{
 
     showRandomLoopy(){
         let randomLoopy = this.loopyList[Math.floor(Math.random() * this.loopyList.length)];
-        // console.log(randomLoopy.src)
+
         randomLoopy.show();
         setTimeout(() => randomLoopy.hide(),2000);
     }
@@ -85,7 +85,7 @@ class Game{
         const evilLoopy = this.loopyList[randomIdx];
         console.log(this.hardOn)
         if(this.hardOn){
-            console.log("evil loopy!")
+            // console.log("evil loopy!")
             let hardTimer = setInterval(()=>{
                 evilLoopy.changeEvil();
                 setInterval(()=>{
@@ -97,12 +97,12 @@ class Game{
     }
 
     gameOver(){
-        clearInterval(this.restTime);
-        clearInterval(this.evilLoopyTimer);
-        document.getElementById("result").innerHTML = `Your score is ${this.score}!`;
         document.getElementById("game-end").showModal();
+        document.getElementById("result").innerHTML = `Your score is ${this.score}!`;
         backgroundMusic.pause();
         backgroundMusic.currentTime = 0;
+        clearInterval(this.restTime);
+        clearInterval(this.evilLoopyTimer);
     }
 
     reStart(){
