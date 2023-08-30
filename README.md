@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="./logo.png" />
+  <img src="./assets/images/logo.png" />
 </p>
 
 ## Whack-a-Loopy
@@ -57,5 +57,8 @@ This project is a vanilla JavaScript project that is implemented with the follow
 * The game interface has a countdown timer, a score display, a mute/unmute button for the background music, and some navigation links to this project's GitHub repository and my LinkedIn profile. When the user's cursor enters the farm picture, it will become a mallet.
 
 
+##  Future Features
 
+- add animation to the mallet
+- increase the number of holes, and add moving holes in the hard mode
 
