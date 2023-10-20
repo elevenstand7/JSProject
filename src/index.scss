@@ -30,12 +30,13 @@ h2{
 }
 
 body{
-    border: 5px solid white;
-    border-radius: 100px;
+    // border: 5px solid white;
+    // border-radius: 100px;
     background: #FFE5E5;
     // background: #FCAEAE;
     margin: 50px 50px 50px 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+
 }
 
 li{
@@ -135,6 +136,11 @@ dialog{
     // height: 70%;
     background-image: url("../assets/images/grass3.png");
     background-size: cover;
+
+}
+
+.game-board{
+    z-index: 0;
 }
 
 .hole{
@@ -200,13 +206,16 @@ dialog{
     left: 0;
     bottom: 0;
     padding: 10px;
+    z-index: -1;
 
   }
 
 .cute_loopy img {
-    width: 70%;
-    height: auto;
+    max-width: 70%;
+    max-height: auto;
     margin-bottom: 10px;
+    min-width: 100px;
+    min-height: 100px;
 }
 
 .fa-brands{
