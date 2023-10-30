@@ -28,7 +28,7 @@ class Game{
         this.gameScore.innerHTML = "0";
         // document.querySelector(".music-img") = './assets/images/on.png';
         document.getElementById("hit-evil").innerHTML = "";
-        this.time = 50;
+        this.time = 15;
         this.score = 0;
         this.gameTime.innerText = this.time + 's';
         this.restTime = setInterval(this.countDown.bind(this), 1000);

@@ -238,3 +238,10 @@ dialog{
         transform: rotate(15deg);
     }
 }
+
+
+.start-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

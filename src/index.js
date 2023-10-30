@@ -23,12 +23,18 @@ function(){
     const hardGame = new Game(true);
 
     let gameStart = document.getElementById("start");
+    let closeModal = document.getElementById("closeModal");
 
+    closeModal.addEventListener("click",()=>{
+        introPage.close();
+    })
 
     gameStart.addEventListener("click", ()=>{
-        introPage.close();
+        // introPage.close();
         // console.log("Game Start!");
         game.start();
+        gameStart.style.display = "none";
+
     });
 
     let reStart = document.getElementById("restart");
