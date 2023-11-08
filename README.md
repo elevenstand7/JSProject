@@ -17,7 +17,7 @@
 
 
 ##  Live Site
-[Whack-a-Loopy](elevenstand7.github.io/JSProject)
+[Whack-a-Loopy](https://elevenstand7.github.io/JSProject/)
 
 
 ## Technologies, Libraries, APIs
